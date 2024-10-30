@@ -1,0 +1,179 @@
+@media only screen and (min-width: 768px) {
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        min-height: 100vh;
+        font-family: "Sky Bold";
+        font-optical-sizing: auto; 
+        background-color: black;
+    }
+    
+    nav{
+        background-color: rgb(0, 0, 0);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav li{
+        height: 60px;
+    }
+    nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: rgb(255, 255, 255);
+    }
+    nav li:first-child{
+        margin-right: auto;
+    }
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(23, 23, 23, 0.293);
+        box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1 );
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        backdrop-filter: blur(30px);
+        justify-content: flex-start;
+    }
+    .sidebar li{
+        width: 100%;
+    }
+    .sidebar a{
+        width: 100%;
+    }
+
+    .cart{
+        font-size: 1.10rem;
+        margin-top: -2.50rem;
+        margin-left: 1rem;
+        color: azure;
+    }
+    /* user */
+    .user{
+        font-size: 1.10rem;
+        margin-top: -1.30rem;
+        margin-left: 3rem;
+        color: azure;
+    }
+    .searchbar{
+        margin-top: -1.30rem;
+        margin-left: 4.70rem;
+        font-size: 1.16rem;
+        color: rgb(255, 255, 255);
+        
+      }
+.textt p{
+    color: #ffffff;
+    text-align: center;
+    margin-top: 9rem;
+    font-size: 1.30rem;
+    -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+}
+.contener{
+    height: 260px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 3rem;
+}
+.contener{
+    display: flex;
+    justify-content: space-around;
+}
+
+.product{
+    height: 250px;
+    margin-top: 0.40rem;
+    margin-left: 12rem;
+    width: 160px;
+    background: rgb(32, 32, 32);
+    border-radius: 5px;
+}
+.thumbnail{
+    border-radius: 5px 5px 0px 0px;
+    height: 140px;
+    background-color: rgb(104, 104, 104);
+}
+.product h2{
+    font-size: 9px;
+    margin-top: 0.30rem;
+    color: #ffffff;
+    text-align: center;
+}
+.product p{
+    font-size:11px;
+    margin-top: 0.50rem;
+    color: #ffffff;
+    text-align: center;
+}
+.product button{
+    width: 6.50rem;
+    height: 30px;
+    border: 1.40px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    margin-top: 2rem;
+    margin-left: 2.80rem;
+    font-family: "Rubik", system-ui;
+    color: rgb(255, 255, 255);
+    font-size: 0.70rem;
+    background: rgb(32, 32, 32);
+}
+.love{
+    font-size: 1.30rem;
+    margin-top: -1.60rem;
+    width: 1rem;
+    color: #5d5d5d;
+    margin-left: 0.50rem;
+}
+
+.product2{
+    -webkit-animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+    animation: flip-vertical-right 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+    height: 250px;
+    margin-top: -15.90rem;
+    margin-left: 1rem;
+    width: 150px;
+    background: rgb(32, 32, 32);
+    border-radius: 5px;
+}
+.product2 h2{
+    font-size: 9px;
+    margin-top: 0.30rem;
+    color: #ffffff;
+    text-align: center;
+}
+.product2 p{
+    font-size:11px;
+    margin-top: 0.50rem;
+    color: #ffffff;
+    text-align: center;
+}
+.product2 button{
+    width: 6.50rem;
+    height: 30px;
+    border: 1.40px solid rgb(255, 255, 255);
+    border-radius: 6px;
+    margin-top: 2rem;
+    margin-left: 2.30rem;
+    font-family: "Rubik", system-ui;
+    color: rgb(255, 255, 255);
+    font-size: 0.70rem;
+    background: rgb(32, 32, 32);
+}
+  }

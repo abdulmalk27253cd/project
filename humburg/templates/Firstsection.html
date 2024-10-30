@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "Firstsection{600px}.css" %}'>
+        <link rel="stylesheet" media="screen and (max-width: 768px)" href='{% static "Firstsection{600px}2.css" %}'>
+        <!-- <link rel="stylesheet" media="screen and (min-width: 768px)" href="/osqproject/project/app/static/">
+        <link rel="stylesheet" media="screen and (min-width: 768px)" href="{768px}PART2.css">
+        <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/{992px}.css">
+        <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/{992px}PART2.css">
+        <link rel="stylesheet" media="screen and (min-width: 1440px)" href="{1440px}.css"> -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القسم القسم</title>
+</head>
+<body>
+    <!-- humburger -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">قسم الادوات</a></li>
+            </ul>
+        <ul>
+        <li><img src=""></li>
+        <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+
+
+
+    <!--  -->
+    <div class="front">
+        <div class="textt">
+            <p>قسم الادوات</p>
+        </div>
+        <div class="contener">
+            <div class="product">
+                <div class="thumbnail"><img></div>
+                <h2>OSQ Killer</h2>
+                <p>200 AED</p>
+                <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+                <div class="love"><i class="fa-regular fa-heart"></i></div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="product2">
+            <div class="thumbnail"><img></div>
+            <h2>OSQ Killer</h2>
+            <p>200 AED</p>
+            <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+        </div>
+
+        <!-- 2-2 -->
+
+        <div class="contener">
+            <div class="product">
+                <div class="thumbnail"><img></div>
+                <h2>OSQ Killer</h2>
+                <p>200 AED</p>
+                <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+                <div class="love"><i class="fa-regular fa-heart"></i></div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="product2">
+            <div class="thumbnail"><img></div>
+            <h2>OSQ Killer</h2>
+            <p>200 AED</p>
+            <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+        </div>
+
+    <div class="center"></div>
+    <div class="back"></div>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

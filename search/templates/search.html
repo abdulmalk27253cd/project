@@ -1,0 +1,216 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "shearch.css" %}'>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "shaerch2.css" %}'>
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="/osqproject/project/search/static/shearch.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="/osqproject/project/search/static/shaerch2.css"> -->
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="Media-phone{768px}.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href="Media-phone{768px}PART2.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/Media-phone{992px}.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/Media-phone{992px}PART2.css">
+    <link rel="stylesheet" media="screen and (min-width: 1440px)" href="Media-phone{1440px}.css">
+    <title>OSQ TEAM</title>
+</head>
+<body onload="loadFavourites()">
+        <!-- mo vid -->
+    </div>
+    <div class="anmithon-icon">
+        <img src='{% static "ddd.gif" %}'>
+        <h4>اكتشف ادوات فريقنا</h4>
+    </div>
+    <div class="anmithon-icon2">
+        <img src='{% static "sh.gif" %}'>
+        <h4>اكتشاف ثغرات المواقع</h4>
+    </div>
+    <div class="contener">
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ NFC</h2>
+            <p>75AED</p>
+            <a href="{% url 'bage1' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+        <div class="product">
+            <div class="thumbnail"><img></div>
+            <h2>OSQ Killer</h2>
+            <p>200 AED</p>
+            <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+     <div class="baner2"></div>
+     
+     <div class="anmithon-icon2">
+        <img src='{% static "wired-outline-37-approve-checked-simple-in-reveal-2.gif" %}'>
+        <h4>نقدم لك ضمان عالي</h4>
+    </div>
+
+    <div class="contener">
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ Cable</h2>
+            <p>50 AED</p>
+            <a href="{% url 'bage3' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ Unblocker</h2>
+            <p>125 AED</p>
+            <a href="{% url 'bage4' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+    
+    <!-- end section -->
+     <div class="end">
+        <div class="end-section">
+            <div class="text-1">
+            <h1 class="h11">!</h1>
+            <h2>OSQ STORE</h2>
+            <p>هو منصة متخصصة في تقديم منتجات الاختراق. يتميز المتجر بتوفير مجموعة متنوعة من الأدوات والبرامج التي تساعد المستخدمين في اختبار أمان الشبكات والأنظمة. يهدف المتجر إلى تزويد العملاء بأحدث التقنيات والأدوات التي تساهم في تعزيز الأمان السيبراني.</p>
+            </div>
+            </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+            function toggleFavourite(button) {
+                var itemId = button.parentElement.getAttribute('data-id');
+                if (button.textContent === "🤍") {
+                    button.classList.add("favourite");
+                    saveFavourite(itemId);
+                } else {
+                    button.textContent = "🤍";
+                    button.classList.remove("favourite");
+                    removeFavourite(itemId);
+                }
+            }
+    
+            function saveFavourite(itemId) {
+                var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+                favourites.push(itemId);
+                localStorage.setItem('favourites', JSON.stringify(favourites));
+            }
+    
+            function removeFavourite(itemId) {
+                var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+                var index = favourites.indexOf(itemId);
+                if (index > -1) {
+                    favourites.splice(index, 1);
+                }
+                localStorage.setItem('favourites', JSON.stringify(favourites));
+            }
+
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+         <form method="post" action="{% url 'search_product' %}">
+            {% csrf_token %}
+     <div class="search">
+        <div class="backgranug">
+            <div class="icon-x"></div>
+            <div class="input-search"> <input type="text" id="searchInput" placeholder="ابحث عن المنتجات..." oninput="searchProducts()">
+                <div class="iconserch"><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="text"><h3>ما الذي تبحث عنه؟</h3></div>
+                <a href="{% url 'home' %}"><div class="delet"><i class="fa-solid fa-x"></i></div></a></form>
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <div class="product-list">
+    <div id="productsList">
+        <div class="product">
+            <h1>!</h1>
+            <div class="img"></div>
+            <div class="pdetils">
+                <h2>USB OSQ 1</h2>
+                <p>100 AED</p>
+            </div>
+        </div>
+            <div class="product">
+                <h1>!</h1>
+                <div class="img"></div>
+                <div class="pdetils">
+                    <h2>USB OSQ 2</h2>
+                    <p>100 AED</p>
+                </div>
+            </div>
+            <div class="product">
+                <h1>!</h1>
+                <div class="img"></div>
+                <div class="pdetils">
+                    <h2>OSQ CARD</h2>
+                    <p>100 AED</p>
+                </div>
+            </div>
+        <div class="product">
+                <h1>!</h1>
+                <div class="img"></div>
+                <div class="pdetils">
+                    <h2>OSQ corus</h2>
+                    <p>100 AED</p>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script>
+        function searchProducts() {
+            var input, filter, productsList, products, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            productsList = document.getElementById('productsList');
+            products = productsList.getElementsByClassName('product');
+
+            for (i = 0; i < products.length; i++) {
+                txtValue = products[i].textContent || products[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    products[i].classList.remove('hidden');
+                } else {
+                    products[i].classList.add('hidden');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+                
+
+     <script src="app.js"></script>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+
+        function searchbar(){
+                        const searchbr = document.querySelector('.search')
+            sidebar.style.display = 'flex'
+        }
+
+        function hidesarchbar(){
+                        const searchbr = document.querySelector('.search')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

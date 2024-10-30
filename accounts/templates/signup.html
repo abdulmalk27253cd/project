@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب</title>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "signup.css" %}'>
+</head>
+<body>
+
+
+<form class="form" method="POST" action="{% url 'register' %}">
+    {% csrf_token %}
+    {{ form }}
+    <span class="title">Sign up</span>
+    <span class="subtitle">Create a free account with your email.</span>
+    <button type="submit">Sign up</button>
+</form>
+</body>
+</html>
