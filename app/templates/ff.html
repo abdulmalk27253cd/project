@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>المنتجات</title>
+    <style>
+        .favourite {
+            background: url('https://example.com/red-heart.png') no-repeat;
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-size: cover;
+        }
+        .not-favourite {
+            background: url('https://example.com/white-heart.png') no-repeat;
+            width: 20px;
+            height: 20px;
+            border: none;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body onload="loadFavourites()">
+    <ul id="productList">
+        <li data-id="1">منتج 1 <button class="not-favourite" onclick="toggleFavourite(this)"></button></li>
+        <li data-id="2">منتج 2 <button class="not-favourite" onclick="toggleFavourite(this)"></button></li>
+        <li data-id="3">منتج 3 <button class="not-favourite" onclick="toggleFavourite(this)"></button></li>
+        <li data-id="4">منتج 4 <button class="not-favourite" onclick="toggleFavourite(this)"></button></li>
+    </ul>
+    <script>
+        function toggleFavourite(button) {
+            var itemId = button.parentElement.getAttribute('data-id');
+            if (button.classList.contains('not-favourite')) {
+                button.classList.remove('not-favourite');
+                button.classList.add('favourite');
+                saveFavourite(itemId);
+            } else {
+                button.classList.remove('favourite');
+                button.classList.add('not-favourite');
+                removeFavourite(itemId);
+            }
+        }
+
+        function saveFavourite(itemId) {
+            var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+            favourites.push(itemId);
+            localStorage.setItem('favourites', JSON.stringify(favourites));
+        }
+
+        function removeFavourite(itemId) {
+            var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+            var index = favourites.indexOf(itemId);
+            if (index > -1) {
+                favourites.splice(index, 1);
+            }
+            localStorage.setItem('favourites', JSON.stringify(favourites));
+        }
+
+        function loadFavourites() {
+            var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+            var productList = document.getElementById('productList').getElementsByTagName('li');
+            for (var i = 0; i < productList.length; i++) {
+                var itemId = productList[i].getAttribute('data-id');
+                var button = productList[i].getElementsByTagName('button')[0];
+                if (favourites.indexOf(itemId) > -1) {
+                    button.classList.remove('not-favourite');
+                    button.classList.add('favourite');
+                }
+            }
+        }
+    </script>
+</body>
+</html>
