@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href='{% static "bage4.css" %}'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title></title>
+</head>
+<body style="background-color: black;font-family: Rubik, system-ui;font-optical-sizing: auto;">              
+    <div class="arrow" style="color: aliceblue; font-size: 2rem; margin-left: 1rem; margin-top: 1rem;">
+        <div class="icon-arrow"><i class="fa-solid fa-chevron-left" onclick="document.location = 'home.html'"></i></div>
+    </div>
+          <!-- Image gallery -->
+          <div class="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-x-8 lg:px-8">
+            <div class="aspect-h-4 aspect-w-3 hidden overflow-hidden rounded-lg lg:block">
+              <img src="" alt="Two each of gray, white, and black shirts laying flat." class="h-full w-full object-cover object-center">
+            </div>
+            <div class="hidden lg:grid lg:grid-cols-1 lg:gap-y-8">
+              <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+                <img src="" alt="Model wearing plain black basic tee." class="h-full w-full object-cover object-center">
+              </div>
+              <div class="aspect-h-2 aspect-w-3 overflow-hidden rounded-lg">
+                <img src="" alt="Model wearing plain gray basic tee." class="h-full w-full object-cover object-center">
+              </div>
+            </div>
+            <!-- img -->
+            <div class="aspect-h-5 aspect-w-4 lg:aspect-h-4 lg:aspect-w-3 sm:overflow-hidden sm:rounded-lg">
+              <img src='{% static "Untitled.gif" %}' class="h-full w-full object-cover object-center">
+            </div>
+          </div>
+      
+          <!-- Product info -->
+          <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
+            <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+              <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl" style="color: aliceblue;">OSQ NFC CARD </h1>
+            </div>
+      
+            <!-- Options -->
+            <div class="mt-4 lg:row-span-3 lg:mt-0">
+              <h2 class="sr-only" style="color: aliceblue;" style="color: aliceblue;"></h2>
+              <p class="text-3xl tracking-tight text-gray-900" style="color: aliceblue;">75 AED</p>
+      
+              <!-- Reviews -->
+                    <!-- Active: "text-gray-900", Default: "text-gray-200" -->
+      
+              <form class="mt-10">
+                <!-- Colors -->
+
+      
+                  <fieldset aria-label="Choose a size" class="mt-4">
+                    <div class="grid grid-cols-4 gap-4 sm:grid-cols-8 lg:grid-cols-4">
+                      </label>
+                    </div>
+                  </fieldset>
+                </div>
+
+
+                <!-- button -->
+                <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" style="margin-top: 5rem; background-color: rgb(255, 255, 255); color:black; -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">الشراء الان</button>
+              </form>
+            </div>
+      
+            <div class="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
+              <!-- Description and details -->
+              <div>
+
+                <!-- Description -->
+
+                <h3 class="sr-only" style="color: aliceblue;">Description</h3>
+      
+                <div class="space-y-6">
+                  <p class="text-base text-gray-900" style="margin-top: -5rem; font-size: 0.70rem; max-width: 20rem; text-align: center; margin-left: 2rem; color: aliceblue; -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both; animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;">
+                    منتج OSQ Unblocker هو جهاز USB متقدم تم تصميمه لإلغاء حظر الأجهزة والوصول إلى الأنظمة المقفلة أو المحمية بكلمات مرور. يعمل OSQ Unblocker على استغلال الثغرات الأمنية في أنظمة التشغيل المختلفة لفتح الأجهزة المعطلة أو التي تم قفلها، سواء كانت هواتف، حواسيب، أو أجهزة لوحية. يتميز بسهولة الاستخدام وفعاليته العالية في الوصول إلى البيانات المقفلة دون الحاجة إلى كلمة المرور أو معلومات الحساب.
+                  </p>
+                  <div class="ull">
+                    <h3>ميزات OSQ Unblocker الخارقة:</h3>
+                    <li>فتح الأجهزة المغلقة بكلمات مرور: يعمل OSQ Unblocker على تجاوز أي كلمة مرور أو قفل أمني سواء كان ذلك قفل النمط، PIN، أو كلمة المرور في أنظمة Windows، macOS، Android، وiOS.</li>
+                    <li>استعادة الوصول إلى الحسابات: يمكّن المستخدم من الوصول إلى الحسابات المقفلة أو المعطلة بسبب نسيان كلمات المرور، دون الحاجة إلى إعادة ضبط المصنع أو فقدان البيانات.</li>
+                    <li>دعم شامل لجميع الأجهزة: متوافق مع مجموعة واسعة من الأجهزة، بما في ذلك الهواتف الذكية، الحواسيب المحمولة، والأجهزة اللوحية من مختلف العلامات التجارية.</li>
+                    <li>شفير آمن: يضمن حماية البيانات الخاصة بالضحية من خلال عملية فتح آمنة، مما يحافظ على الملفات والمعلومات الحساسة دون أي ضرر أو تسريب. واجهة سهلة الاستخدام: بفضل الواجهة البسيطة لتطبيق OSQ Unblocker، يمكن للمستخدم توصيل الـ USB واتباع خطوات سهلة ومباشرة لفتح الجهاز المستهدف خلال دقائق معدودة</li>
+                
+                </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

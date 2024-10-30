@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1440px) {
+    body{
+        font-family: "Rubik", system-ui;
+        font-optical-sizing: auto; 
+        background:#b5b5b5;
+    }
+    .image{
+        height: 24rem;
+        width: 100%;
+        background-color: black;
+    }
+    .medil p{
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    .medil h1{
+        margin-top: -1.90rem;
+        margin-left: 0.90rem;
+        font-size: 1.60rem;
+    }
+    .medil h4{
+        font-size: 1.40rem;
+        margin-left: 2rem;
+        margin-top: -1rem;
+    }
+    .medil .descripton{
+        font-size: 0.90rem;
+        max-width: 45rem;
+        margin-left: 2rem;
+        margin-top: -1rem;
+    }
+    .end button{
+        width: 30rem;
+        height: 4rem;
+        margin-top: 13rem;
+        border: none;
+        font-size: 1rem;
+        border-radius: 10px;
+        margin-left: 1rem;
+        font-family: "Rubik", system-ui;
+        color: aliceblue;
+        background-color: black;
+    }
+    .end .button2{
+        width: 13rem;
+    }
+  }

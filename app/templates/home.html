@@ -1,0 +1,160 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.4/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "Media-phone{600px}.css" %}'>
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href='{% static "Media-phone{600px}PART2.css" %}'>
+    <!-- <link rel="stylesheet" media="screen and (max-width: 600px)" href="/osqproject/project/app/static/Media-phone{600px}.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="/osqproject/project/app/static/Media-phone{600px}PART2.css">
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href='{% static "Media-phone{768px}.css" %}'>
+    <link rel="stylesheet" media="screen and (min-width: 768px)" href='{% static "Media-phone{768px}PART2.css" %}'> -->
+    <!-- <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/Media-phone{992px}.css">
+    <link rel="stylesheet" media="screen and (min-width: 992px)" href="big-size/Media-phone{992px}PART2.css">
+    <link rel="stylesheet" media="screen and (min-width: 1440px)" href="Media-phone{1440px}.css"> -->
+    <title>الصفحه الرئيسيه</title>
+</head>
+<body onload="loadFavourites()">
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="{% url 'humburg' %}">قسم الادوات</a></li>
+            </ul>
+        <ul>
+        <li><a href="Firstsection.html"></a></li>
+        <li><a href="#"></a></li>
+        <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <!-- cart -->
+    <div>
+        <div class="cart"><i class="fa-solid fa-cart-shopping"></i></div>
+        <!-- user -->
+        <a href="{% url 'login' %}"><div class="user"><i class="fa-solid fa-user"></i></div></a>
+        <a href="{% url 'search_product' %}"><div class="searchbar" onclick="document.location = 'searh.html'"><i class="fa-solid fa-magnifying-glass"></i></div></a>
+
+        <div class="logo"><img src='{% static "glitch.gif" %}'></div>
+        <!-- mo vid -->
+        <div class="mo-vid"><img src=""></div>
+    </div>
+    <div class="anmithon-icon">
+        <img src='{% static "ddd.gif" %}'>
+        <h4>اكتشف ادوات فريقنا</h4>
+    </div>
+    <div class="anmithon-icon2">
+        <img src='{% static "sh.gif" %}'>
+        <h4>اكتشاف ثغرات المواقع</h4>
+    </div>
+    <div class="contener">
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ NFC</h2>
+            <p>75AED</p>
+            <a href="{% url 'bage1' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+        <div class="product">
+            <div class="thumbnail"><img></div>
+            <h2>OSQ Killer</h2>
+            <p>200 AED</p>
+            <a href="{% url 'bage2' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+
+    <!-- 2 -->
+     <div class="baner2"></div>
+     
+     <div class="anmithon-icon2">
+        <img src='{% static "wired-outline-37-approve-checked-simple-in-reveal-2.gif" %}'>
+        <h4>نقدم لك ضمان عالي</h4>
+    </div>
+
+    <div class="contener">
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ Cable</h2>
+            <p>50 AED</p>
+            <a href="{% url 'bage3' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+
+        <div class="product">
+            <div class="thumbnail"><img src="{{product.image.url}}"></div>
+            <h2>OSQ Unblocker</h2>
+            <p>125 AED</p>
+            <a href="{% url 'bage4' %}"><button>الشراء الان <i class="fa-solid fa-cart-shopping"></i></button></a>
+            <div class="love"><i class="fa-regular fa-heart"></i></div>
+        </div>
+    </div>
+    
+    <!-- end section -->
+     <div class="end">
+        <div class="end-section">
+            <div class="text-1">
+            <h1 class="h11">!</h1>
+            <h2>OSQ STORE</h2>
+            <p>هو منصة متخصصة في تقديم منتجات الاختراق. يتميز المتجر بتوفير مجموعة متنوعة من الأدوات والبرامج التي تساعد المستخدمين في اختبار أمان الشبكات والأنظمة. يهدف المتجر إلى تزويد العملاء بأحدث التقنيات والأدوات التي تساهم في تعزيز الأمان السيبراني.</p>
+            </div>
+            </div>
+            <div class="icons">
+                <h1>!</h1>
+                <div class="instagram"><img src='{% static "wired-outline-2542-logo-instagram-in-reveal-4.gif" %}'></div>
+                <div class="tiktok"><img src='{% static "wired-outline-2675-logo-square-tiktok-in-reveal-4.gif" %}'></div>
+                <div class="youtube"><img src='{% static "wired-outline-2547-logo-youtube-in-reveal-3.gif" %}'></div>
+            </div>
+            <div class="hr"></div>
+            <div class="payment2">
+                <p>طرق الدفع</p>
+                <div class="icon">
+                <div class="visa-cube"><img src='{% static "visa1.png" %}'></div>
+                <div class="paypal-cube"><img src='{% static "196566.png" %}'></div>
+                <div class="binninc-cube"><img src='{% static "Binance-0e4c4bfb014e4d9ca8f0b6e11c9db562.jpg.png" %}'></div>
+                </div>
+            </div>
+        </div>
+        </div>
+     </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+            function toggleFavourite(button) {
+                var itemId = button.parentElement.getAttribute('data-id');
+                if (button.textContent === "🤍") {
+                    button.classList.add("favourite");
+                    saveFavourite(itemId);
+                } else {
+                    button.textContent = "🤍";
+                    button.classList.remove("favourite");
+                    removeFavourite(itemId);
+                }
+            }
+    
+            function saveFavourite(itemId) {
+                var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+                favourites.push(itemId);
+                localStorage.setItem('favourites', JSON.stringify(favourites));
+            }
+    
+            function removeFavourite(itemId) {
+                var favourites = JSON.parse(localStorage.getItem('favourites')) || [];
+                var index = favourites.indexOf(itemId);
+                if (index > -1) {
+                    favourites.splice(index, 1);
+                }
+                localStorage.setItem('favourites', JSON.stringify(favourites));
+            }
+
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+@media only screen and (max-width: 768px) {
+    body{
+        min-height: 100vh;
+        font-family: "Rubik", system-ui;
+        font-optical-sizing: auto;
+        background: linear-gradient(rgb(88, 88, 88),#000000);
+    }
+    @-webkit-keyframes slide-top {
+        0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        }
+        100% {
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
+        }
+    }
+    @keyframes slide-top {
+        0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        }
+        100% {
+        -webkit-transform: translateY(-100px);
+                transform: translateY(-100px);
+        }
+    }
+    @-webkit-keyframes tracking-in-contract {
+        0% {
+        letter-spacing: 1em;
+        opacity: 0;
+        }
+        40% {
+        opacity: 0.6;
+        }
+        100% {
+        letter-spacing: normal;
+        opacity: 1;
+        }
+    }
+    @keyframes tracking-in-contract {
+        0% {
+        letter-spacing: 1em;
+        opacity: 0;
+        }
+        40% {
+        opacity: 0.6;
+        }
+        100% {
+        letter-spacing: normal;
+        opacity: 1;
+        }
+    }
+    
+        *{
+            margin: 0;
+            padding: 0;
+        }
+    nav{
+        background-color: rgb(255, 255, 255);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav li{
+        height: 60px;
+    }
+    nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: black;
+    }
+    nav a:hover{
+        background-color: #ffffff;
+    }
+    nav li:first-child{
+        margin-right: auto;
+    }
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(255, 255, 255, 0.293);
+        box-shadow: -10px 0 10px rgb(0, 0, 0, 0.1 );
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        backdrop-filter: blur(10px);
+        justify-content: flex-start;
+    }
+    .sidebar li{
+        width: 100%;
+    }
+    .sidebar a{
+        width: 100%;
+    }
+    /*  */
+    .textt p{
+        color: #ffffff;
+        text-align: center;
+        margin-top: 9rem;
+        font-size: 1.90rem;
+        -webkit-animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-contract 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+
+    }
+    .boxs{
+        margin-top: -9rem;
+    }
+    .box{
+        width: 13rem;
+        height: 19rem;
+        margin-top: 20rem;
+        background-color: aliceblue;
+        margin-left: 0.50rem;
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .img{
+        height: 9rem;
+        background-color: #000000;
+    }
+    .descrption{
+        margin-left: 0.20rem;
+    }
+    .price{
+        font-size: 1.30rem;
+        margin-top: -2rem;
+        margin-left: 9.60rem;
+    }
+    .bay-button button{
+        border: none;
+        color: #ffffff;
+        background-color: #000000;
+        width: 7rem;
+        height: 1.90rem;
+        font-size: 0.50rem;
+        font-family: "Rubik", system-ui;
+        font-optical-sizing: auto;
+        border-radius: 5px;
+        margin-left: 0.30rem;
+        margin-top: 6.40rem;
+        text-shadow: 1px 1px 1px 10px cornflowerblue;
+    }
+    /* 2 */
+    .box2{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0.40rem;
+        margin-top: -32rem;
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .box3{
+        margin-left: 0.10rem;
+        margin-top: -18rem;
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    .box4{
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 0.40rem;
+        margin-top: -32rem;
+        -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    
+}
